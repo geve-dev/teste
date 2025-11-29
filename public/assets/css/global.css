@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,14 +15,14 @@
     --background-color: #070707;
 
     --surface-color: #0d0d0d;
-    --surface-opacity:  #2424243f;
-    --surface-clear:  #3939393f;
+    --surface-opacity: #2424243f;
+    --surface-clear: #3939393f;
     --surface-gradient: linear-gradient(45deg,
-    #111 0%,
-    #333 25%,
-    #222 50%,
-    #333 75%,
-    #111 100%);
+            #111 0%,
+            #333 25%,
+            #222 50%,
+            #333 75%,
+            #111 100%);
     --surface-highlight: rgba(127, 255, 212, 0.3);
 
     --text-color-primary: #ffffff;
@@ -54,8 +54,15 @@ body {
     overflow-x: hidden;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+}
+
+@supports (-webkit-touch-callout: none) {
+    input,
+    textarea {
+        font-size: 16px;
+    }
 }
 
 /* Scroll reveal utility classes */
@@ -72,6 +79,6 @@ html{
 }
 
 /* Optional: allow delay via CSS variable */
-.reveal[data-delay] { 
+.reveal[data-delay] {
     transition-delay: var(--delay, 0ms);
 }

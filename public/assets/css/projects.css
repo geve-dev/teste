@@ -29,6 +29,7 @@
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 100px;
     flex-wrap: wrap;
+    perspective: 5000px;
 }
 
 .card{
@@ -51,7 +52,7 @@
 
 .card:hover{
     transform: scale(1.01);
-    box-shadow: 0 0 20px var(--shadow-glow);
+    box-shadow: 0 0 30px var(--shadow-glow);
     background: var(--background-color);
     border: 1px solid var(--brand-glow);
     transform: translatey(-3%) scaleX(1);

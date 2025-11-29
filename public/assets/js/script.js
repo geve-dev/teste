@@ -110,9 +110,9 @@
         const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
         if (!canHover) return;
 
-        const cards = document.querySelectorAll('.skill');
-        const maxTilt = 7; // degrees
-        const baseLift = -3; // px
+        const cards = document.querySelectorAll('.skill, .card');
+        const maxTilt = 15; // degrees
+        const baseLift = -5; // px
 
         cards.forEach((card) => {
             let raf = null;
