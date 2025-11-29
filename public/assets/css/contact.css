@@ -33,7 +33,7 @@
 
 .glitch-card {
   position: relative;
-  width: 700px;
+  width: 850px;
   border: 1px solid rgba(0, 242, 234, 0.5);
   box-shadow:
     0 0 20px rgba(0, 242, 234, 0.1),
@@ -66,7 +66,7 @@
 }
 
 .card-body {
-  padding: 1.5rem;
+  padding: 3rem 6rem;
 }
 
 .form-group {
@@ -266,4 +266,35 @@
   0% { width: 0%; opacity: 0.6; }
   50% { width: 70%; opacity: 1; }
   100% { width: 100%; opacity: 0.6; }
+}
+
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover, 
+.form-group input:-webkit-autofill:focus, 
+.form-group input:-webkit-autofill:active {
+    /* Usa box-shadow interna para cobrir o fundo indesejado do navegador */
+    -webkit-box-shadow: 0 0 0 30px #00000000 inset !important;
+    /* Força a cor do texto a ser a cor do seu tema */
+    -webkit-text-fill-color: var(--text-color-primary) !important;
+    /* Transição longa para evitar o efeito "flash" de mudança de cor */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Garante que o input mantenha o fundo transparente após o autofill (redundância de segurança) */
+.form-group input {
+    background: transparent;
+}
+
+/* Correção para textarea (menos comum, mas boa prática) */
+.form-group textarea:-webkit-autofill,
+.form-group textarea:-webkit-autofill:hover, 
+.form-group textarea:-webkit-autofill:focus, 
+.form-group textarea:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #00000000 inset !important;
+    -webkit-text-fill-color: var(--text-color-primary) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-group textarea {
+    background: transparent;
 }
