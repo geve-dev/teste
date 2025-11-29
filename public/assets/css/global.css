@@ -48,8 +48,8 @@
 body {
     font: var(--md);
     color: var(--text-color-secondary);
-    background-color: var(--master-white);
-    background-image: url('assets/imgs/banner (1).mp4');
+    background-color: var(--master-black);
+    background-image: url('assets/imgs/banner.mp4');
     overflow-x: hidden;
 }
 
