@@ -51,12 +51,13 @@
   margin: 16px 0 20px;
   color: var(--text-color-secondary);
   line-height: 1.6;
-  max-width: 480px;
+  max-width: 380px;
 }
 
 .footer-social {
   display: flex;
   gap: 14px;
+  margin-top: 10px;
 }
 
 .footer-social a {
@@ -78,6 +79,12 @@
   transform: translateY(-2px);
   background: rgba(127, 255, 212, 0.12);
   box-shadow: 0 0 18px rgba(0, 255, 208, 0.20);
+}
+
+.footer-contact h3{
+  font-size: var(--text-md);
+  color: var(--text-color-primary);
+  margin-bottom: 12px;
 }
 
 .footer-contact ul li {
