@@ -17,11 +17,11 @@
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0 24px 24px;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 4fr 1fr;
   gap: 32px;
 }
 
