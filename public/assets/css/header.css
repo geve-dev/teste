@@ -7,7 +7,7 @@ header{
     padding: 5PX 20px;
     margin: 20px 5%;
     border-radius: 100px;
-    background-color: var(--surface-opacity);
+    background-color: var(--surface-clear);
     box-shadow: 0 0 20px var(--shadow-dark);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);

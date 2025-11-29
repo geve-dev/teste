@@ -16,6 +16,7 @@
 
     --surface-color: #0d0d0d;
     --surface-opacity:  #2424243f;
+    --surface-clear:  #3939393f;
     --surface-gradient: linear-gradient(45deg,
     #111 0%,
     #333 25%,
