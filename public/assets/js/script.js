@@ -78,3 +78,75 @@
             console.error('Erro de rede:', error);
         }
     });
+
+
+        // Reveal on scroll using IntersectionObserver
+    const revealOptions = {
+        root: null,
+        rootMargin: '0px 0px -10% 0px', // start a bit before fully in view
+        threshold: 0.1
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const delay = el.getAttribute('data-delay');
+                if (delay) el.style.setProperty('--delay', `${parseInt(delay, 20)}ms`);
+                el.classList.add('show');
+                observer.unobserve(el);
+            }
+        });
+    }, revealOptions);
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+        // ensure initial hidden state if loaded mid-page
+        el.classList.remove('show');
+        revealObserver.observe(el);
+    });
+
+    // 3D tilt hover for skill cards (no HTML changes required)
+    (() => {
+        const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        if (!canHover) return;
+
+        const cards = document.querySelectorAll('.skill');
+        const maxTilt = 7; // degrees
+        const baseLift = -3; // px
+
+        cards.forEach((card) => {
+            let raf = null;
+            let rx = 0, ry = 0;
+
+            function apply() {
+                card.style.transform = `translateY(${baseLift}px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+                raf = null;
+            }
+
+            function onEnter() {
+                // start with base lift
+                card.style.transition = 'transform 150ms ease, box-shadow 150ms ease';
+                card.style.transform = `translateY(${baseLift}px)`;
+            }
+
+            function onMove(e) {
+                const rect = card.getBoundingClientRect();
+                const cx = rect.left + rect.width / 2;
+                const cy = rect.top + rect.height / 2;
+                const dx = (e.clientX - cx) / (rect.width / 2);  // -1 .. 1
+                const dy = (e.clientY - cy) / (rect.height / 2); // -1 .. 1
+                ry = dx * maxTilt;      // left/right => rotateY
+                rx = -dy * maxTilt;     // up/down    => rotateX
+                if (!raf) raf = requestAnimationFrame(apply);
+            }
+
+            function onLeave() {
+                card.style.transition = 'transform 250ms ease, box-shadow 150ms ease';
+                card.style.transform = '';
+            }
+
+            card.addEventListener('mouseenter', onEnter);
+            card.addEventListener('mousemove', onMove);
+            card.addEventListener('mouseleave', onLeave);
+        });
+    })();

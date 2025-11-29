@@ -28,6 +28,7 @@
     margin-bottom: 50px;
     width: 70%;
     height: auto;
+    perspective: 800px;
 }
 
 .skill {
@@ -124,3 +125,13 @@
 
 /* Figma */
 .skill:nth-child(9) { --brand-glow: #aa7fee; }
+
+.sombra {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    box-shadow: 0 0 100px 400px var(--shadow-dark);
+    margin-top: 750px;
+    z-index: -1;
+}
