@@ -1,4 +1,4 @@
-video{
+video {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -6,7 +6,11 @@ video{
     z-index: -1;
 }
 
-.home{
+.light-theme video {
+    filter: invert(1);
+}
+
+.home {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -14,50 +18,74 @@ video{
     align-items: center;
 }
 
-.home-text{
+.home-text {
     margin-top: 50px;
     color: var(--text-primary);
     z-index: 1;
 }
 
-.home-text h4{
+.home-text h4 {
     font-size: var(--text-xlg);
-    color: var(--text-color-primary); 
+    color: var(--text-color-primary);
     font-weight: 100;
 }
 
-.home-text h4 span{
+.home-text h4 span {
     display: inline-block;
     font-size: var(--text-xlg);
     color: var(--brand-glow);
-    text-shadow: 1px 1px 10px var(--shadow-glow);        
+    text-shadow: 1px 1px 10px var(--shadow-glow);
     font-weight: bold;
     animation: wave 3s ease-out infinite;
 }
+
 @keyframes wave {
-    0% { transform: rotate(0.0deg) }
-   10% { transform: rotate(14.0deg) }   
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate(0.0deg) } 
-   100% { transform: rotate(0.0deg) }
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    100% {
+        transform: rotate(0.0deg)
+    }
 }
 
-.home-text h2{                                 
+.home-text h2 {
     font-size: var(--text-xl);
     color: var(--text-color-primary);
     font-weight: 100;
     margin-bottom: 20px;
 }
-                           
-.home-text h2 span{
-    color: var(--brand-glow);
-    text-shadow: 1px 1px 10px var(--shadow-glow);        
-}                                                                 
 
-.home-text h3{
+.home-text h2 span {
+    color: var(--brand-glow);
+    text-shadow: 1px 1px 10px var(--shadow-glow);
+}
+
+.home-text h3 {
     color: var(--brand-glow);
     font-size: var(--text-lg);
     font-weight: 600;
@@ -68,15 +96,22 @@ video{
     overflow: hidden;
     animation: typing 3s steps(20, end) forwards, blink 0.8s infinite;
 }
+
 @keyframes typing {
-    from {  }
-    to { width: 17.4ch; }
-}  
-@keyframes blink {
-    50% { border-color: transparent }
+    from {}
+
+    to {
+        width: 17.4ch;
+    }
 }
 
-.home-text a{
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+.home-text a {
     display: inline-block;
     margin-top: 35px;
     padding: 10px 25px;
@@ -92,14 +127,14 @@ video{
     transition: 0.3s;
 }
 
-.home-text a:hover{
+.home-text a:hover {
     background-color: var(--brand-glow);
     color: var(--background-color);
     box-shadow: 0 0 20px var(--shadow-glow);
     text-shadow: 0 0 10px var(--shadow-glow);
 }
 
-.gv-icon{
+.gv-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +142,7 @@ video{
     height: 400px;
 }
 
-.perfil1{
+.perfil1 {
     position: relative;
     left: 100%;
     width: 400px;
@@ -116,19 +151,22 @@ video{
     filter: drop-shadow(0 0 5px var(--shadow-glow));
     animation: ar 3s ease-in-out infinite;
 }
+
 @keyframes ar {
-        0% {
+    0% {
         transform: translateX(-50%) scaleX(-1) rotate(0deg);
     }
+
     50% {
         transform: translateX(-50%) scaleX(-1) rotate(-0.7deg);
     }
+
     100% {
         transform: translateX(-50%) scaleX(-1) rotate(0deg);
     }
 }
 
-.code{
+.code {
     position: relative;
     width: 400px;
     height: 400px;
@@ -136,14 +174,54 @@ video{
     filter: drop-shadow(-11px 7px 10px var(--shadow-glow));
     animation: float 3s ease-in-out infinite;
 }
+
 @keyframes float {
-        0% {
+    0% {
         transform: translateX(-50%) scaleX(-1) translateY(15px) rotate(0deg);
     }
+
     50% {
         transform: translateX(-50%) scaleX(-1) translateY(5px) rotate(1deg);
     }
+
     100% {
         transform: translateX(-50%) scaleX(-1) translateY(15px) rotate(0deg);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 50px;
+        padding-top: 100px;
+        /* Add space for fixed header if needed */
+    }
+
+    .home-text {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .gv-icon {
+        width: 300px;
+        height: 300px;
+    }
+
+    .perfil1,
+    .code {
+        width: 300px;
+        height: 300px;
+    }
+
+    video {
+        width: 100vh;
+        height: 100vw;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        object-fit: cover;
     }
 }

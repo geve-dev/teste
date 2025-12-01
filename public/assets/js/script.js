@@ -59,7 +59,7 @@ form.addEventListener("submit", async function (event) {
         params.set('mensagem', params.get('message'));
         params.delete('message');
     }
-
+    
     try {
         // 3. Enviar os dados para o Formspree usando Fetch API
         const response = await fetch(event.target.action, {
@@ -160,4 +160,33 @@ document.querySelectorAll('.reveal').forEach((el) => {
         card.addEventListener('mousemove', onMove);
         card.addEventListener('mouseleave', onLeave);
     });
+})();
+
+// Theme Switcher
+(() => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle?.querySelector('i');
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        body.classList.add('light-theme');
+        if (icon) icon.className = 'fa-solid fa-sun';
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            const isLight = body.classList.contains('light-theme');
+
+            // Update icon
+            if (icon) {
+                icon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            }
+
+            // Save preference
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+    }
 })();

@@ -6,6 +6,7 @@
 }
 
 :root {
+    --card-black: #000000;
     --brand-color: #7fffd4;
     --brand-glow: #00ffd0;
 
@@ -46,6 +47,28 @@
     --text-sm: 0.875rem;
 }
 
+.light-theme {
+    --brand-color: #d47fff;
+    --brand-glow: #d100ff;
+
+    --master-black: #ffffff;
+    --master-white: #000000;
+    
+    --background-color: #f0f0f0;
+
+    --surface-color: #e0e0e0;
+    --surface-opacity: #e0e0e03f;
+    --surface-clear: #d0d0d03f;
+    --surface-gradient: linear-gradient(45deg, #f0f0f0 0%, #d0d0d0 100%);
+
+    --text-color-primary: #000000;
+    --text-color-secondary: #333333;
+
+    --shadow-dark: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(148, 68, 179, 0.2);
+    --shadow-glow: rgba(217, 0, 255, 0.302);
+}
+
 body {
     font: var(--md);
     color: var(--text-color-secondary);
@@ -59,6 +82,7 @@ html {
 }
 
 @supports (-webkit-touch-callout: none) {
+
     input,
     textarea {
         font-size: 16px;
