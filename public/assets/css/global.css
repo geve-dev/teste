@@ -20,9 +20,9 @@
     --surface-clear: #3939393f;
     --surface-gradient: linear-gradient(45deg,
             #111 0%,
-            #333 25%,
-            #222 50%,
-            #333 75%,
+            #111 25%,
+            #111 50%,
+            #111 75%,
             #111 100%);
     --surface-highlight: rgba(127, 255, 212, 0.3);
 
@@ -33,10 +33,11 @@
     --shadow-dark: rgba(0, 0, 0, 0.93);
     --shadow-color: rgba(68, 179, 142, 0.5);
     --shadow-glow: rgba(0, 255, 208, 0.5);
-
+    --shadow-opacity: rgba(0, 242, 234, 0.08);
 
     --font-family: "Poppins", sans-serif;
     --font-heading: 'Orbitron', sans-serif;
+    --font-family2: "Fira Code", Consolas, "Courier New", Courier, monospace;
 
     --text-xl: 2.5rem;
     --text-xlg: 2.25rem;
@@ -48,12 +49,12 @@
 }
 
 .light-theme {
-    --brand-color: #d47fff;
-    --brand-glow: #d100ff;
+    --brand-color: #9145e9;
+    --brand-glow: #6e23b9;
 
     --master-black: #ffffff;
     --master-white: #000000;
-    
+
     --background-color: #f0f0f0;
 
     --surface-color: #e0e0e0;
@@ -64,16 +65,19 @@
     --text-color-primary: #000000;
     --text-color-secondary: #333333;
 
-    --shadow-dark: rgba(0, 0, 0, 0.1);
-    --shadow-color: rgba(148, 68, 179, 0.2);
-    --shadow-glow: rgba(217, 0, 255, 0.302);
+    --shadow-header: rgba(0, 0, 0, 0.3);
+    --shadow-dark: rgb(255, 255, 255);
+    --shadow-color: rgba(115, 23, 177, 0.4);
+    --shadow-glow: rgba(119, 0, 255, 0.4);
+    --shadow-opacity: rgba(113, 0, 242, 0.20);
+
 }
 
 body {
-    font: var(--md);
+    font-size: var(--text-md);
     color: var(--text-color-secondary);
     background-color: var(--master-black);
-    background-image: url('assets/imgs/banner.mp4');
+    /* background-image: url('assets/imgs/banner.mp4'); */
     overflow-x: hidden;
 }
 
@@ -82,7 +86,6 @@ html {
 }
 
 @supports (-webkit-touch-callout: none) {
-
     input,
     textarea {
         font-size: 16px;

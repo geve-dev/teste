@@ -1,4 +1,4 @@
-header{
+header {
     position: fixed;
     width: 90%;
     display: flex;
@@ -14,7 +14,7 @@ header{
     z-index: 1000;
 }
 
-header h1 a{
+header h1 a {
     font-family: 'Orbitron', sans-serif;
     font-size: var(--text-xlg);
     font-family: var(--font-heading);
@@ -23,7 +23,7 @@ header h1 a{
     text-decoration: none;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,13 +31,13 @@ nav{
     gap: 20px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     gap: 5%;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: var(--text-color-primary);
     font-size: var(--text-smd);
@@ -46,7 +46,7 @@ nav a{
     transition: 0.3s, color 0.3s;
 }
 
-nav a:hover{
+nav a:hover {
     background-color: var(--surface-opacity);
     color: var(--brand-color);
     box-shadow: 0 0 15px var(--shadow-glow);
@@ -54,28 +54,28 @@ nav a:hover{
     transition: 0.3s, color 0.3s;
 }
 
-header div{
+header div {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;  
+    gap: 10px;
     margin-left: 10%;
 }
 
-header div a{
+header div a {
     font-size: var(--text-md);
     color: var(--brand-color);
     transition: 0.3s;
 }
 
-header div a:hover{
+header div a:hover {
     font-size: var(--text-md);
     color: var(--brand-glow);
     text-shadow: 0 0 15px var(--shadow-glow);
     transition: 0.3s;
 }
 
-header button{
+header button {
     place-self: center;
     padding: 5px 10px;
     font-size: var(--text-smd);
@@ -87,7 +87,7 @@ header button{
     transition: 0.3s;
 }
 
-header button:hover{
+header button:hover {
     background-color: var(--brand-glow);
     color: var(--background-color);
     box-shadow: 0 0 15px var(--shadow-glow);
@@ -95,4 +95,78 @@ header button:hover{
     transition: 0.3s;
 }
 
+/* Mobile Menu Button - Hidden by default */
+#mobile-menu-btn {
+    display: none;
+}
 
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        position: fixed;
+    }
+
+    #mobile-menu-btn {
+        display: block;
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--surface-clear);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 10px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 10px 20px var(--shadow-dark);
+
+        /* Hidden state */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: 0.3s ease;
+        pointer-events: none;
+    }
+
+    nav.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    header div {
+        margin-left: 0;
+    }
+
+    /* Hide social icons on very small screens if needed, or adjust spacing */
+    header div a {
+        display: none;
+        /* Optional: hide social icons in header on mobile to save space */
+    }
+
+    /* Keep theme toggle and menu button visible */
+    #theme-toggle {
+        margin-left: 0;
+    }
+}

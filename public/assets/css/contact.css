@@ -1,26 +1,20 @@
-.contact{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;  
+.contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
 }
 
-.contact h2{
-    font-size: var(--text-xl);
-    color: var(--text-color-primary);
+.contact h2 {
+  font-size: var(--text-xl);
+  color: var(--text-color-primary);
 }
 
-.contact h2 span{
-    color: var(--brand-glow);
-    text-shadow: 0 0 10px var(--shadow-glow);        
-}
-
-.glitch-form-wrapper {
-  --font-family: "Fira Code", Consolas, "Courier New", Courier, monospace;
-  --font-family2: "Poppins", sans-serif;
-
+.contact h2 span {
+  color: var(--brand-glow);
+  text-shadow: 0 0 10px var(--shadow-glow);
 }
 
 .glitch-form-wrapper {
@@ -28,15 +22,15 @@
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-  font-family: var(--font-family);
+  font-family: var(--font-family2);
 }
 
 .glitch-card {
   position: relative;
   width: 850px;
-  border: 1px solid rgba(0, 242, 234, 0.5);
+  border: 1px solid var(--shadow-glow);
   box-shadow:
-    0 0 20px rgba(0, 242, 234, 0.1),
+    0 0 20px var(--shadow-opacity),
     inset 0 0 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   margin: 0.5rem;
@@ -49,11 +43,7 @@
   justify-content: center;
   align-items: center;
   padding: 0.5em 1em;
-  border-bottom: 1px solid rgba(0, 242, 234, 0.5);
-}
-
-.card-title {
-  justify-content: center;
+  border-bottom: 1px solid var(--shadow-glow);
   justify-self: center;
   width: 100%;
   padding: 0.8em;
@@ -90,7 +80,7 @@
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 2px solid rgba(0, 242, 234, 0.3);
+  border-bottom: 2px solid var(--shadow-color);
   padding: 0.75em 0;
   font-size: 1rem;
   color: var(--text-color-primary);
@@ -103,8 +93,8 @@
   border-color: var(--brand-glow);
 }
 
-.form-group input:focus + .form-label,
-.form-group input:not(:placeholder-shown) + .form-label {
+.form-group input:focus+.form-label,
+.form-group input:not(:placeholder-shown)+.form-label {
   top: -1.2em;
   font-size: 0.8rem;
   opacity: 1;
@@ -148,7 +138,7 @@
 }
 
 .submit-btn:hover .btn-text {
-  opacity: 1; 
+  opacity: 1;
 }
 
 .submit-btn::before,
@@ -160,7 +150,7 @@
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 2px solid rgba(0, 242, 234, 0.3);
+  border-bottom: 2px solid var(--shadow-color);
   padding: 0.75em 0;
   font-size: 1rem;
   color: var(--text-color-primary);
@@ -174,8 +164,8 @@
   border-color: var(--brand-glow);
 }
 
-.form-group textarea:focus + .form-label,
-.form-group textarea:not(:placeholder-shown) + .form-label {
+.form-group textarea:focus+.form-label,
+.form-group textarea:not(:placeholder-shown)+.form-label {
   top: -1.2em;
   font-size: 0.8rem;
   opacity: 1;
@@ -187,13 +177,14 @@
   max-width: calc(100% - 1rem);
   margin-top: 1.25rem;
   margin-inline: auto;
-  display: none; /* hidden by default; JS toggles */
+  display: none;
+  /* hidden by default; JS toggles */
   padding: 1rem 1.25rem;
   border: 1px solid rgba(0, 242, 234, 0.2);
   background: rgba(0, 0, 0, 0.35);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(4px);
-  box-shadow: 0 0 20px rgba(0, 242, 234, 0.08), inset 0 0 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 20px var(--shadow-opacity), inset 0 0 10px var(--shadow-color);
   border-radius: 10px;
   color: var(--text-color-primary);
   text-align: left;
@@ -201,7 +192,7 @@
 }
 
 .form-status .status-title {
-  font-family: var(--font-family2);
+  font-family: var(--font-family);
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.08em;
@@ -210,7 +201,7 @@
 }
 
 .form-status .status-message {
-  font-family: var(--font-family2);
+  font-family: var(--font-family);
   font-size: 0.95rem;
   line-height: 1.45rem;
   opacity: 0.9;
@@ -243,8 +234,8 @@
   width: 28px;
   height: 28px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--brand-glow);
   font-size: 0.9rem;
 }
@@ -262,38 +253,79 @@
 }
 
 @keyframes loadBar {
-  0% { width: 0%; opacity: 0.6; }
-  50% { width: 70%; opacity: 1; }
-  100% { width: 100%; opacity: 0.6; }
+  0% {
+    width: 0%;
+    opacity: 0.6;
+  }
+
+  50% {
+    width: 70%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 0.6;
+  }
 }
 
 .form-group input:-webkit-autofill,
-.form-group input:-webkit-autofill:hover, 
-.form-group input:-webkit-autofill:focus, 
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus,
 .form-group input:-webkit-autofill:active {
-    /* Usa box-shadow interna para cobrir o fundo indesejado do navegador */
-    -webkit-box-shadow: 0 0 0 30px #00000000 inset !important;
-    /* Força a cor do texto a ser a cor do seu tema */
-    -webkit-text-fill-color: var(--text-color-primary) !important;
-    /* Transição longa para evitar o efeito "flash" de mudança de cor */
-    transition: background-color 5000s ease-in-out 0s;
+  /* Usa box-shadow interna para cobrir o fundo indesejado do navegador */
+  -webkit-box-shadow: 0 0 0 30px #00000000 inset !important;
+  /* Força a cor do texto a ser a cor do seu tema */
+  -webkit-text-fill-color: var(--text-color-primary) !important;
+  /* Transição longa para evitar o efeito "flash" de mudança de cor */
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /* Garante que o input mantenha o fundo transparente após o autofill (redundância de segurança) */
 .form-group input {
-    background: transparent;
+  background: transparent;
 }
 
 /* Correção para textarea (menos comum, mas boa prática) */
 .form-group textarea:-webkit-autofill,
-.form-group textarea:-webkit-autofill:hover, 
-.form-group textarea:-webkit-autofill:focus, 
+.form-group textarea:-webkit-autofill:hover,
+.form-group textarea:-webkit-autofill:focus,
 .form-group textarea:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #00000000 inset !important;
-    -webkit-text-fill-color: var(--text-color-primary) !important;
-    transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0 30px #00000000 inset !important;
+  -webkit-text-fill-color: var(--text-color-primary) !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .form-group textarea {
-    background: transparent;
+  background: transparent;
+}
+
+/* Light theme overrides for email send status message */
+.light-theme .form-status {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--shadow-color);
+  color: var(--text-color-secondary);
+  box-shadow: 0 0 20px var(--shadow-opacity), inset 0 0 10px var(--shadow-color);
+}
+
+.light-theme .form-status .status-title {
+  color: var(--brand-glow);
+}
+
+.light-theme .status-icon {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--brand-glow);
+}
+
+.light-theme .status-progress {
+  background: linear-gradient(90deg, var(--brand-glow), var(--brand-color));
+  box-shadow: 0 0 10px var(--brand-glow);
+}
+
+.light-theme .form-status.success,
+.light-theme .form-status.error,
+.light-theme .form-status.loading {
+  border-color: var(--shadow-color);
+  box-shadow: 0 0 25px var(--shadow-opacity);
 }

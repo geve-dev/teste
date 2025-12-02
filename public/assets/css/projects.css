@@ -128,7 +128,7 @@
     width: 1px;
     height: 1px;
     border-radius: 100%;
-    box-shadow: 0 0 100px 700px var(--shadow-dark);
+    box-shadow: 0 0 100px 2000px var(--shadow-dark);
     margin-top: 750px;
     z-index: -1;
 }

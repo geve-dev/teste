@@ -167,12 +167,20 @@ document.querySelectorAll('.reveal').forEach((el) => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     const icon = themeToggle?.querySelector('i');
+    const homeIcon = document.querySelector('.gv-icon .perfil1');
+    const defaultHomeIconSrc = 'assets/imgs/gv-icon1.png';
+    const purpleHomeIconSrc = 'assets/imgs/gv-icon-purple.png';
+    const codeIcon = document.querySelector('.gv-icon .code');
+    const defaultCodeIconSrc = 'assets/imgs/code-icon.png';
+    const purpleCodeIconSrc = 'assets/imgs/code-icon-purple.png';
 
     // Load saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
         body.classList.add('light-theme');
         if (icon) icon.className = 'fa-solid fa-sun';
+        if (homeIcon) homeIcon.src = purpleHomeIconSrc;
+        if (codeIcon) codeIcon.src = purpleCodeIconSrc;
     }
 
     if (themeToggle) {
@@ -183,6 +191,14 @@ document.querySelectorAll('.reveal').forEach((el) => {
             // Update icon
             if (icon) {
                 icon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            }
+
+            // Update home GV and code icons based on theme
+            if (homeIcon) {
+                homeIcon.src = isLight ? purpleHomeIconSrc : defaultHomeIconSrc;
+            }
+            if (codeIcon) {
+                codeIcon.src = isLight ? purpleCodeIconSrc : defaultCodeIconSrc;
             }
 
             // Save preference
