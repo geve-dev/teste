@@ -59,7 +59,7 @@ form.addEventListener("submit", async function (event) {
         params.set('mensagem', params.get('message'));
         params.delete('message');
     }
-    
+
     try {
         // 3. Enviar os dados para o Formspree usando Fetch API
         const response = await fetch(event.target.action, {
@@ -203,6 +203,34 @@ document.querySelectorAll('.reveal').forEach((el) => {
 
             // Save preference
             localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('.nav-links li a');
+
+    if (mobileMenuBtn && nav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
+            }
+        });
+
+        // Close menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-xmark');
+                }
+            });
         });
     }
 })();

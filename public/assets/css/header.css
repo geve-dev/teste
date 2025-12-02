@@ -105,12 +105,15 @@ header button:hover {
         padding: 10px 20px;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
-        margin: 0;
+        width: calc(100% - 40px);
+        margin: 20px;
         top: 0;
         left: 0;
-        border-radius: 0;
+        border-radius: 100px;
         position: fixed;
+        background-color: var(--surface-clear);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     #mobile-menu-btn {
@@ -133,6 +136,7 @@ header button:hover {
         gap: 10px;
         border-radius: 0 0 20px 20px;
         box-shadow: 0 10px 20px var(--shadow-dark);
+        z-index: 1000;
 
         /* Hidden state */
         opacity: 0;

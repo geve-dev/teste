@@ -27,7 +27,7 @@
 
 .glitch-card {
   position: relative;
-  width: 850px;
+  width: 60vw;
   border: 1px solid var(--shadow-glow);
   box-shadow:
     0 0 20px var(--shadow-opacity),
@@ -328,4 +328,11 @@
 .light-theme .form-status.loading {
   border-color: var(--shadow-color);
   box-shadow: 0 0 25px var(--shadow-opacity);
+}
+
+@media (max-width: 1100px) {
+  .glitch-card {
+    width: 80vw;
+  }
+
 }
