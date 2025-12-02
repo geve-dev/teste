@@ -143,3 +143,50 @@
         column-gap: 20%;
     }
 }
+
+@media (max-width: 800px) {
+    .projects {
+        margin-top: 550px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));    
+        gap: 5%;
+    }   
+
+    .card {
+        width: 250px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+    .projects {
+        margin-top: 550px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));    
+    }   
+
+    .card {
+        width: 250px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects {
+        margin-top: 670px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));    
+        row-gap: 3%;
+    }   
+
+    .card {
+        width: 300px;
+        height: 500px;
+    }
+}

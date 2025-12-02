@@ -31,30 +31,9 @@
   perspective: 800px;
 }
 
-/* @media (max-width: 1024px) {
-  .skills-container {
-    width: 90%;
-    gap: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-container {
-    grid-template-columns: repeat(2, 1fr);
-    width: 95%;
-    gap: 20px;
-  } */
-
-  .skill {
-    width: 100%;
-    height: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-container {
-    grid-template-columns: 1fr;
-  }
+.skill {
+  width: 100%;
+  height: 180px;
 }
 
 .skill {
@@ -137,9 +116,17 @@
   --brand-glow: #ff4500;
 }
 
+body.light-theme .skill:nth-child(1) {
+  --brand-glow: #cc3700;
+}
+
 /* CSS */
 .skill:nth-child(2) {
   --brand-glow: #007bff;
+}
+
+body.light-theme .skill:nth-child(2) {
+  --brand-glow: #0056b3;
 }
 
 /* JavaScript */
@@ -147,38 +134,89 @@
   --brand-glow: #f7df1e;
 }
 
-/* Bootstrap */
-.skill:nth-child(4) {
-  --brand-glow: #7909f7;
-}
-
-/* Git */
-.skill:nth-child(5) {
-  --brand-glow: #f34f29;
+body.light-theme .skill:nth-child(3) {
+  --brand-glow: #b89e00;
 }
 
 /* React */
-.skill:nth-child(6) {
+.skill:nth-child(4) {
   --brand-glow: #00e6ff;
 }
 
+body.light-theme .skill:nth-child(4) {
+  --brand-glow: #009db0;
+}
+
 /* Tailwind */
-.skill:nth-child(7) {
+.skill:nth-child(5) {
   --brand-glow: #38bdf8;
 }
 
-/* GitHub */
+body.light-theme .skill:nth-child(5) {
+  --brand-glow: #0284c7;
+}
+
+/* Bootstrap */
+.skill:nth-child(6) {
+  --brand-glow: #7909f7;
+}
+
+body.light-theme .skill:nth-child(6) {
+  --brand-glow: #5e07c2;
+}
+
+/* Node.js */
+.skill:nth-child(7) {
+  --brand-glow: #83cd29;
+}
+
+body.light-theme .skill:nth-child(7) {
+  --brand-glow: #4d7a18;
+}
+
+/* Express.js */
 .skill:nth-child(8) {
-  --brand-glow: #ffffff;
+  --brand-glow: #9e9e9e;
 }
 
 body.light-theme .skill:nth-child(8) {
+  --brand-glow: #333333;
+}
+
+/* SQL */
+.skill:nth-child(9) {
+  --brand-glow: #336791;
+}
+
+body.light-theme .skill:nth-child(9) {
+  --brand-glow: #1a3c5e;
+}
+
+/* Git */
+.skill:nth-child(10) {
+  --brand-glow: #f34f29;
+}
+
+body.light-theme .skill:nth-child(10) {
+  --brand-glow: #c23e21;
+}
+
+/* GitHub */
+.skill:nth-child(11) {
+  --brand-glow: #ffffff;
+}
+
+body.light-theme .skill:nth-child(11) {
   --brand-glow: #000000;
 }
 
 /* Figma */
-.skill:nth-child(9) {
+.skill:nth-child(12) {
   --brand-glow: #aa7fee;
+}
+
+body.light-theme .skill:nth-child(12) {
+  --brand-glow: #7c4dff;
 }
 
 .sombra {
@@ -192,22 +230,56 @@ body.light-theme .skill:nth-child(8) {
 }
 
 @media (max-width: 1100px) {
-
-  .skill{
+  .skill {
     width: 200px;
     height: 150px;
   }
 
   .skill h3 {
-    font-size: var(--text-md);
+    font-size: var(--text-smd);
   }
-
 }
 
 @media (max-width: 800px) {
-  /* .skill {
-    width: 150px;
-    height: 100px;
-    border-radius: 5px;
-  } */
+  .skills {
+    margin-top: 150px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+
+  .skill {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+  }
+
+  .skill h3 {
+    font-size: var(--text-md);
+  }
+}
+
+@media (max-width: 700px) {
+  .skill {
+    width: 200px;
+    height: 150px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2 minmax(120px, 1fr));
+    
+  }
+
+  .skill h3 {
+    font-size: var(--text-smd);
+  }
+}
+
+@media (max-width: 600px) {
+    .skills {
+        margin-top: 500px;
+    }
 }

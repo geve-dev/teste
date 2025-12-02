@@ -55,7 +55,7 @@
     border-radius: 10px;
     border: 2px solid var(--brand-glow);
     box-shadow: inset 0 0 50px var(--shadow-glow),
-        0 0 70px var(--brand-glow);
+        0 0 40px var(--brand-glow);
     transition: 0.3s;
 }
 
@@ -116,9 +116,8 @@
         gap: 30px;
     }
 
-    .about-img img {
-        top: 0;
-        margin-bottom: 20px;
+    .about-img {
+        margin-top: 40px;
     }
 
     .about-text {
@@ -138,5 +137,11 @@
         font-size: var(--text-sm);
         width: 70%;
         justify-self: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .about {
+        margin-top: 100px;
     }
 }

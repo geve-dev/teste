@@ -20,6 +20,7 @@ video {
 
 .home-text {
     margin-top: 50px;
+    /* margin-left: 50px; */
     color: var(--text-primary);
     z-index: 1;
 }
@@ -195,26 +196,29 @@ video {
         height: 100%;
     }
 
+    .home-text {
+        margin-left: 50px;
+    }
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .home {
         flex-direction: column;
         justify-content: center;
         gap: 30px;
-        padding-top: 100px;
         /* Add space for fixed header if needed */
     }
 
     .home-text {
-        text-align: center;
-        margin-top: 20px;
+        /* text-align: center; */
+        margin-top: 250px;
     }
 
     .gv-icon {
         width: 300px;
         height: 300px;
+        margin-bottom: 100px;
     }
 
     .perfil1,
@@ -223,7 +227,7 @@ video {
         height: 300px;
     }
 
-    video {
+    /* video {
         display: none;
-    }
+    } */
 }

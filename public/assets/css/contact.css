@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 450px;
 }
 
 .contact h2 {
@@ -55,7 +55,7 @@
 }
 
 .card-body {
-  padding: 3rem 6rem;
+  padding: 3rem 2rem;
 }
 
 .form-group {
@@ -335,4 +335,48 @@
     width: 80vw;
   }
 
+}
+
+@media (max-width: 800px) {
+  .contact {
+    margin-top: 870px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    font-size: var(--text-sm);
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.5em 0;
+    font-size: var(--text-sm);
+  }
+
+  .form-label {
+    font-size: var(--text-sm);
+  }
+}
+
+@media (max-width: 600px) {
+    .contact {
+        margin-top: 600px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        font-size: var(--text-sm);
+        padding: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.5em 0;
+        font-size: var(--text-sm);
+    }
+
+    .form-label {
+        font-size: var(--text-sm);
+    }
 }
