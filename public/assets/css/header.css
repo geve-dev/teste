@@ -4,7 +4,7 @@ header {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    padding: 5PX 20px;
+    padding: 5px 20px;
     margin: 20px 5%;
     border-radius: 100px;
     background-color: var(--surface-clear);
@@ -12,6 +12,10 @@ header {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     z-index: 1000;
+}
+
+header h1 {
+    margin-bottom: 10px;
 }
 
 header h1 a {
@@ -95,17 +99,17 @@ header button:hover {
     transition: 0.3s;
 }
 
-/* Mobile Menu Button - Hidden by default */
 #mobile-menu-btn {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     header {
         padding: 10px 20px;
         justify-content: space-between;
         align-items: center;
         width: calc(100% - 40px);
+        padding: 1.5px 20px;
         margin: 20px;
         top: 0;
         left: 0;
@@ -138,7 +142,6 @@ header button:hover {
         box-shadow: 0 10px 20px var(--shadow-dark);
         z-index: 1000;
 
-        /* Hidden state */
         opacity: 0;
         visibility: hidden;
         transform: translateY(-20px);
@@ -163,13 +166,6 @@ header button:hover {
         margin-left: 0;
     }
 
-    /* Hide social icons on very small screens if needed, or adjust spacing */
-    header div a {
-        display: none;
-        /* Optional: hide social icons in header on mobile to save space */
-    }
-
-    /* Keep theme toggle and menu button visible */
     #theme-toggle {
         margin-left: 0;
     }

@@ -283,3 +283,14 @@ body.light-theme .skill:nth-child(12) {
         margin-top: 500px;
     }
 }
+
+@media (max-width: 500px) {
+    .skill {
+        width: 150px;
+        height: 100px;
+    }
+
+    .skill h3 {
+    font-size: var(--text-sm);
+  }
+}
