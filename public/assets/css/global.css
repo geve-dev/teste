@@ -35,6 +35,8 @@
     --shadow-glow: rgba(0, 255, 208, 0.5);
     --shadow-opacity: rgba(0, 242, 234, 0.08);
 
+    --sombra: rgba(0, 0, 0, 0.93);
+
     --font-family: "Poppins", sans-serif;
     --font-heading: 'Orbitron', sans-serif;
     --font-family2: "Fira Code", Consolas, "Courier New", Courier, monospace;
@@ -77,7 +79,7 @@ body {
     font-size: var(--text-md);
     color: var(--text-color-secondary);
     background-color: var(--master-black);
-    /* background-image: url('assets/imgs/banner.mp4'); */
+    background-image: url('assets/imgs/banner.mp4');
     overflow-x: hidden;
 }
 
