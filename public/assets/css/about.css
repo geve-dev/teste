@@ -61,7 +61,7 @@
 
 
 .about-img {
-    border-radius: 50%;
+    border-radius: 10%;
     box-shadow: 0 0 10px var(--shadow-glow);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(3px);
@@ -133,10 +133,9 @@
     }
 
     .sobre-mim p {
-        margin-bottom: 15px;
+        margin: 0 auto 15px auto;
         font-size: var(--text-sm);
         width: 70%;
-        justify-self: center;
     }
 }
 
