@@ -351,7 +351,7 @@
   .form-group input,
   .form-group textarea {
     padding: 0.5em 0;
-    font-size: var(--text-sm);
+    font-size: 16px;
   }
 
   .form-label {
@@ -360,23 +360,23 @@
 }
 
 @media (max-width: 600px) {
-    .contact {
-        margin-top: 300px;
-    }
+  .contact {
+    margin-top: 300px;
+  }
 
-    .submit-btn {
-        width: 100%;
-        font-size: var(--text-sm);
-        padding: 10px;
-    }
+  .submit-btn {
+    width: 100%;
+    font-size: var(--text-sm);
+    padding: 10px;
+  }
 
-    .form-group input,
-    .form-group textarea {
-        padding: 0.5em 0;
-        font-size: var(--text-sm);
-    }
+  .form-group input,
+  .form-group textarea {
+    padding: 0.5em 0;
+    font-size: 16px;
+  }
 
-    .form-label {
-        font-size: var(--text-sm);
-    }
+  .form-label {
+    font-size: var(--text-sm);
+  }
 }

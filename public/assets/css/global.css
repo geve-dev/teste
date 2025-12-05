@@ -17,7 +17,7 @@
 
     --surface-color: #0d0d0d;
     --surface-opacity: #2424243f;
-    --surface-clear: #3939393f;
+    --surface-clear: rgba(255, 255, 255, 0.09);
     --surface-gradient: linear-gradient(45deg,
             #111 0%,
             #111 25%,
@@ -33,6 +33,7 @@
     --shadow-dark: rgba(0, 0, 0, 0.93);
     --shadow-color: rgba(68, 179, 142, 0.5);
     --shadow-glow: rgba(0, 255, 208, 0.5);
+    --shadow-nav: rgba(0, 255, 208, 0.8);
     --shadow-opacity: rgba(0, 242, 234, 0.08);
 
     --sombra: rgba(0, 0, 0, 0.93);
@@ -71,6 +72,7 @@
     --shadow-dark: rgb(255, 255, 255);
     --shadow-color: rgba(115, 23, 177, 0.4);
     --shadow-glow: rgba(119, 0, 255, 0.4);
+    --shadow-nav: rgba(119, 0, 255, 0.7);
     --shadow-opacity: rgba(113, 0, 242, 0.20);
 
 }
@@ -87,12 +89,7 @@ html {
     scroll-behavior: smooth;
 }
 
-@supports (-webkit-touch-callout: none) {
-    input,
-    textarea {
-        font-size: 16px;
-    }
-}
+
 
 /* Scroll reveal utility classes */
 .reveal {
@@ -110,4 +107,12 @@ html {
 /* Optional: allow delay via CSS variable */
 .reveal[data-delay] {
     transition-delay: var(--delay, 0ms);
+}
+
+@media screen and (max-width: 768px) {
+  input, 
+  textarea, 
+  select {
+    font-size: 16px !important;
+  }
 }

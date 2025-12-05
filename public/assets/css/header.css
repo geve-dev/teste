@@ -135,9 +135,7 @@ header button:hover {
         top: 110%;
         left: 0;
         width: 100%;
-        background-color: var(--shadow-glow);
-        /* backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px); */
+        background-color: var(--shadow-nav);
         flex-direction: column;
         justify-content: center;
         justify-self: center;
@@ -196,7 +194,7 @@ header button:hover {
     }
 
     .nav-social a:hover {
-        color: var(--brand-glow);
+        color: var(--master-white);
         transform: scale(1.1);
     }
 
