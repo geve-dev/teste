@@ -170,13 +170,13 @@ header button:hover {
     nav ul li {
         width: 100%;
         text-align: center;
-        border-bottom: 1px solid var(--master-white);
+        border-bottom: 1px solid var(--master-black);
         padding: 15px 0;
     }
 
     nav ul li a {
-        text-shadow: 1px 1px 20px var(--master-black);
-
+        text-shadow: 1px 1px 20px var(--master-white);
+        color: var(--master-black);
     }
 
     .nav-social {
@@ -187,7 +187,7 @@ header button:hover {
     }
 
     .nav-social a {
-        color: var(--text-color-primary);
+        color: var(--master-black);
         font-size: 1.5rem;
         transition: 0.3s;
         display: block;

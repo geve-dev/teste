@@ -33,7 +33,7 @@
     --shadow-dark: rgba(0, 0, 0, 0.93);
     --shadow-color: rgba(68, 179, 142, 0.5);
     --shadow-glow: rgba(0, 255, 208, 0.5);
-    --shadow-nav: rgba(0, 255, 208, 0.8);
+    --shadow-nav: rgba(0, 255, 208, 0.9);
     --shadow-opacity: rgba(0, 242, 234, 0.08);
 
     --sombra: rgba(0, 0, 0, 0.93);
@@ -72,7 +72,7 @@
     --shadow-dark: rgb(255, 255, 255);
     --shadow-color: rgba(115, 23, 177, 0.4);
     --shadow-glow: rgba(119, 0, 255, 0.4);
-    --shadow-nav: rgba(119, 0, 255, 0.7);
+    --shadow-nav: rgba(119, 0, 255, 0.8);
     --shadow-opacity: rgba(113, 0, 242, 0.20);
 
 }
